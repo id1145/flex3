@@ -1,0 +1,100 @@
+body {
+  /* 身体 */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  background-color: rgb(255, 142, 176);
+}
+.fx {
+  display: flex;
+}
+.box {
+  /* 大盒子 */
+  box-sizing: border-box;
+  height: 50vh;
+  width: 50vh;
+  flex-wrap: wrap;
+  animation: xuan 10s linear infinite;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+.aixin {
+  /* 爱心 */
+  background-color: rgb(255, 88, 138);
+  width: 20vh;
+  height: 20vh;
+}
+.aixin::before {
+  /* ... */
+  content: "";
+  width: 20vh;
+  height: 20vh;
+  position: absolute;
+  border-radius: 50%;
+  transform: translateY(-10vh);
+  background-color: rgb(255, 88, 138);
+}
+.aixin::after {
+  /* ... */
+  content: "";
+  width: 20vh;
+  height: 20vh;
+  position: absolute;
+  border-radius: 50%;
+  transform: translateX(10vh);
+  background-color: rgb(255, 88, 138);
+}
+.aixin:nth-child(1) {
+  /*  */
+  transform: translate(-0.5vh, 2vh) rotate(270deg);
+}
+.aixin:nth-child(2) {
+  /*  */
+  transform: translate(0.5vh, 2vh) rotate(0deg);
+}
+.aixin:nth-child(3) {
+  /*  */
+  transform: translate(-0.5vh, -2vh) rotate(180deg);
+}
+.aixin:nth-child(4) {
+  /*  */
+  transform: translate(0.5vh, -2vh) rotate(90deg);
+}
+@keyframes xuan {
+  /* 旋转 */
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dl {
+  width: 50vh;
+  height: 40vh;
+  flex-direction: column;
+  z-index: 1;
+  backdrop-filter: blur(1vh);
+  box-shadow: 0.5vh 1vh 1vh rgb(231, 106, 148);
+  align-items: center;
+  border-radius: 3vh;
+}
+.dll {
+  height: 4vh;
+  z-index: 1;
+}
+.tu {
+  border-radius: 50%;
+  width: 13vh;
+}
